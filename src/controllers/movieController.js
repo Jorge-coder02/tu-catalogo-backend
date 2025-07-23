@@ -22,3 +22,19 @@ export const addToViews = async (req, res) => {
     res.status(500).json({ error: "Error al actualizar vistas" });
   }
 };
+
+export const getViews = async (req, res) => {
+  try {
+    const userId = req.user.id; // asumimos que el middleware auth ya hizo esto
+
+    const user = await User.findById(userId).select("vistas");
+    if (!user) {
+      return res.status(404).json({ error: "Usuario no encontrado" });
+    }
+
+    res.json({ vistas: user.vistas });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Error al obtener vistas" });
+  }
+};
