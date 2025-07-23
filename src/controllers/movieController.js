@@ -9,14 +9,32 @@ export const addToViews = async (req, res) => {
       return res.status(400).json({ error: "No se proporcionó imdbID" });
     }
 
-    // Añadir el imdbID solo si no está repetido
+    const user = await User.findById(userId);
+    if (!user) {
+      return res.status(404).json({ error: "Usuario no encontrado" });
+    }
+
+    // ❌ Verificar si ya está en vistas
+    if (user.vistas.includes(imdbID)) {
+      return res.status(200).json({
+        message: "La película ya está en vistas",
+        alreadyAdded: true,
+        vistas: user.vistas,
+      });
+    }
+
+    // ✅ Agregar si no está
     const updatedUser = await User.findByIdAndUpdate(
       userId,
-      { $addToSet: { vistas: imdbID } }, // evita duplicados
+      { $addToSet: { vistas: imdbID } },
       { new: true }
     );
 
-    res.json({ vistas: updatedUser.vistas });
+    res.status(200).json({
+      message: "Película añadida a vistas",
+      alreadyAdded: false,
+      vistas: updatedUser.vistas,
+    });
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: "Error al actualizar vistas" });
