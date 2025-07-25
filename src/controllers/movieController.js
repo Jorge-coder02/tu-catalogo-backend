@@ -49,7 +49,7 @@ export const addToWatchlist = async (req, res) => {
     res.status(200).json({
       message: "Película añadida a pendientes",
       alreadyAdded: false,
-      pendientes: updatedUser.pendientespendientes,
+      pendientes: updatedUser.pendientes,
     });
   } catch (err) {
     console.error(err);
