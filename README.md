@@ -1,9 +1,9 @@
 # ⚙🎬 Tu Catálogo (Hub personalizable de pelis y series)
 
-[![Tu Catálogo](https://img.shields.io/badge/Status-In-progress-yellow)](https://github.com/Jorge-coder02/tu-catalogo-backend)
+[![Tu Catálogo](https://img.shields.io/badge/Status-In_Progress-yellow)](https://github.com/Jorge-coder02/tu-catalogo-backend)
 [![Licencia](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
 
-🔗 **Visitar frontend:** [Ver en vivo](https://tucatalogohup.up.railway.app/)
+🔗 **Visitar frontend:** [Ver en vivo](https://tucatalogohub.up.railway.app/)
 
 ## 🚀 Tecnologías Principales
 
