@@ -1,5 +1,21 @@
 import User from "../models/userSchema.js";
 
+export const getPendings = async (req, res) => {
+  try {
+    const userId = req.user.id; // asumimos que el middleware auth ya hizo esto
+
+    const user = await User.findById(userId).select("pendientes");
+    if (!user) {
+      return res.status(404).json({ error: "Usuario no encontrado" });
+    }
+
+    res.json({ pendientes: user.pendientes });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Error al obtener pendientes" });
+  }
+};
+
 export const addToWatchlist = async (req, res) => {
   try {
     const userId = req.user.id; // asumimos que el middleware auth ya hizo esto
