@@ -3,7 +3,7 @@
 [![Tu Catálogo](https://img.shields.io/badge/Status-In_Progress-yellow)](https://github.com/Jorge-coder02/tu-catalogo-backend)
 [![Licencia](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
 
-🔗 **Visitar frontend:** [Ver en vivo](https://tucatalogohup.up.railway.app/)
+🔗 **Visitar frontend:** [Ver en vivo](https://tucatalogohub.up.railway.app/)
 
 ## 🚀 Tecnologías Principales
 
