@@ -11,10 +11,6 @@
 ![Express](https://img.shields.io/badge/Express-4.18.2-000000?logo=express&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-7.0.8-47A248?logo=mongodb&logoColor=white)
 
-## ✨ Características Destacadas
-
-- ✅ Datos obtenidos a partir de APIs (OMDb y TMDB)
-
 ## 📦 Instalación
 
 1. **Clonar el repositorio**
